@@ -24,9 +24,9 @@ export default defineConfig({
     proxy: {
       cors: "true",
       "/api": {
-        target: "http://1.15.121.222:8080", //API服务器的地址
-        ws: true, //代理websockets
-        changeOrigin: true, // 虚拟的站点需要更管origin
+        target: "localhost", //API Server
+        ws: true, 
+        changeOrigin: true, 
         rewrite: (path) => path.replace(/^\/api/, ""),
         secure: false,
       },
